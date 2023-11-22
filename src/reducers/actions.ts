@@ -1,17 +1,9 @@
 import { HotelState } from "./types";
-import type { PayloadAction } from "@reduxjs/toolkit";
 
-export const incrementAction = (state: HotelState) => {
-  state.value += 1;
+export const incrementAction = (state: HotelState[]) => {
+  state;
 };
 
-export const decrementAction = (state: HotelState) => {
-  state.value -= 1;
-};
-
-export const incrementByAmountAction = (
-  state: HotelState,
-  action: PayloadAction<number>
-) => {
-  state.value += action.payload;
+export const decrementAction = (state: HotelState[]) => {
+  state;
 };

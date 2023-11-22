@@ -1,14 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { HotelState } from "./types";
-import {
-  decrementAction,
-  incrementAction,
-  incrementByAmountAction,
-} from "./actions";
+import { decrementAction, incrementAction } from "./actions";
+import mockData from "../assets/mockData/mock_hotel_data_with_picsum.json";
 
-const initialState: HotelState = {
-  value: 0,
-};
+const initialState: HotelState[] = mockData;
 
 export const hotelSlice = createSlice({
   name: "hotel",
@@ -16,10 +11,9 @@ export const hotelSlice = createSlice({
   reducers: {
     increment: incrementAction,
     decrement: decrementAction,
-    incrementByAmount: incrementByAmountAction,
   },
 });
 
-export const { increment, decrement, incrementByAmount } = hotelSlice.actions;
+export const { increment, decrement } = hotelSlice.actions;
 
 export default hotelSlice.reducer;
