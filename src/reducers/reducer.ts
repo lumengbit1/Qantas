@@ -1,30 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+import { HotelState } from "./types";
+import {
+  decrementAction,
+  incrementAction,
+  incrementByAmountAction,
+} from "./actions";
 
-export interface CounterState {
-  value: number;
-}
-
-const initialState: CounterState = {
+const initialState: HotelState = {
   value: 0,
 };
 
-export const counterSlice = createSlice({
-  name: "counter",
+export const hotelSlice = createSlice({
+  name: "hotel",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
-    },
+    increment: incrementAction,
+    decrement: decrementAction,
+    incrementByAmount: incrementByAmountAction,
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = hotelSlice.actions;
 
-export default counterSlice.reducer;
+export default hotelSlice.reducer;
