@@ -7,4 +7,6 @@ fileignoreconfig:
   checksum: 5fe742fa65b1dea8626174e639646dd7665eb5976ae9caa62855bc9bb33aeeb0
 - filename: '.talismanrc '
   checksum: 5b7febbfac7cf9c56c56f626e3db95c82c6a60b0c26a560b95a1850dbfbc386f
+- filename: pnpm-lock.yaml
+  checksum: 9f01082c24dfa08278599e880cf93e58c403e3b01cff2d4706fa745abfa8134b
   version: ""
