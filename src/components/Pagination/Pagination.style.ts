@@ -13,10 +13,7 @@ export const Root = styled.div`
   }
 `;
 
-export const NavItem = styled.i`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const NavItem = styled.button`
   background-color: grey;
   width: 3rem;
   height: 3rem;
@@ -27,5 +24,14 @@ export const NavItem = styled.i`
 
   &:hover {
     background-color: blue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: grey;
+    cursor: auto;
   }
 `;
