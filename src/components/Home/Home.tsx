@@ -26,7 +26,13 @@ const HomePage = () => {
       </button>
       <CardsContainer>
         {hotels.map((hotel) => (
-          <Card key={hotel.id} name={hotel.name} heroImage={hotel.heroImage} />
+          <Card
+            key={hotel.id}
+            name={hotel.name}
+            heroImage={hotel.heroImage}
+            location={hotel.location}
+            rating={hotel.rating}
+          />
         ))}
       </CardsContainer>
     </Root>
