@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { InformationProps } from "./type";
 
 export const CardContainer = styled.div`
   display: grid;
@@ -17,4 +18,14 @@ export const InfoContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 1rem;
+`;
+
+export const HotelName = styled.div`
+  font-weight: 800;
+  font-size: 2rem;
+`;
+
+export const Information = styled.div<InformationProps>`
+  display: flex;
+  color: ${(props) => (props.$dark ? "#555555" : "#838383")};
 `;

@@ -5,4 +5,9 @@ export interface Props {
   heroImage: HotelState.heroImage;
   location: HotelState.location;
   rating: HotelState.rating;
+  sleep: HotelState.sleep;
+}
+
+interface InformationProps {
+  $dark?: boolean;
 }
