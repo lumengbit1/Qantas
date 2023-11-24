@@ -33,6 +33,7 @@ const HomePage = () => {
             location={hotel.location}
             rating={hotel.rating}
             sleep={hotel.sleep}
+            price={hotel.price}
           />
         ))}
       </CardsContainer>
