@@ -9,7 +9,7 @@ import {
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { IconMap } from "./type";
+import { IconMapping } from "./type";
 
 export const numberToArray = (number: number): number[] => {
   const integerPart = Math.floor(number);
@@ -41,7 +41,7 @@ export const renderIcon = (
   value: number | undefined,
   type: string | undefined
 ): IconDefinition => {
-  const mappingIcon: IconMap = {
+  const mappingIcon: IconMapping = {
     faRegularStar: faRegularStar,
     faSolidStar: faSolidStar,
     faRegularCircle: faRegularCircle,

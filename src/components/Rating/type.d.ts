@@ -4,6 +4,6 @@ export interface Props {
   rating: HotelState.rating;
 }
 
-export type IconMap = {
+export type IconMapping = {
   [key: string]: IconDefinition;
 };

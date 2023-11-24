@@ -33,7 +33,6 @@ export const HotelContainer = styled.div`
   align-items: start;
   padding: ${padding};
   justify-content: space-between;
-  box-sizing: border-box;
 
   @media only screen and (max-width: 30rem) {
     grid-template-columns: auto;
