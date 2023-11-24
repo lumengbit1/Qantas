@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import CardsContainer from "../CardsContainer/CardsContainer";
-import Card from "../Card/Card";
-import Sort from "../Sort/Sort";
+import CardsContainer from "../../components/CardsContainer/CardsContainer";
+import Card from "../../components/Card/Card";
+import Sort from "../../components/Sort/Sort";
 import { Root } from "./Home.style";
 import type { RootState } from "../../store/store";
 

@@ -1,5 +1,5 @@
 import { Navigate, Routes, Route } from "react-router-dom";
-import HomePage from "../components/Home/Home";
+import HomePage from "../pages/Home/Home";
 
 const Routers = () => (
   <Routes>
