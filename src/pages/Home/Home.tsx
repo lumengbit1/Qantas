@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import Card from "../../components/Card/Card";
+import Pagination from "../../components/Pagination/Pagination";
 import Sort from "../../components/Sort/Sort";
+
 import { Root } from "./Home.style";
 import type { RootState } from "../../store/store";
 
@@ -25,6 +27,7 @@ const HomePage = () => {
           />
         ))}
       </CardsContainer>
+      <Pagination />
     </Root>
   );
 };
