@@ -7,6 +7,7 @@ export interface Props {
   rating: HotelState.rating;
   sleep: HotelState.sleep;
   price: HotelState.price;
+  inclusions: HotelState.inclusions;
 }
 
 interface InformationProps {

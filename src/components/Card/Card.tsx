@@ -5,12 +5,21 @@ import {
   HotelContainer,
   HotelName,
   ImageContainer,
+  InclusionsContainer,
   InfoContainer,
   Information,
   PriceContainer,
 } from "./Card.style";
 
-const Card = ({ name, heroImage, location, rating, sleep, price }: Props) => {
+const Card = ({
+  name,
+  heroImage,
+  location,
+  rating,
+  sleep,
+  price,
+  inclusions,
+}: Props) => {
   return (
     <CardContainer>
       <ImageContainer role="img" aria-label="hotel_image">
@@ -26,6 +35,13 @@ const Card = ({ name, heroImage, location, rating, sleep, price }: Props) => {
           </Information>
           <Rating aria-label="hotel_rating" rating={rating} />
           <Information $dark>{sleep ? `Sleeps ${sleep}` : null}</Information>
+          <InclusionsContainer aria-label="hotel_inclusions">
+            {inclusions.map((inclusion: string) => (
+              <li key={inclusion} aria-label={inclusion}>
+                {inclusion}
+              </li>
+            ))}
+          </InclusionsContainer>
         </InfoContainer>
         {price.total.amount && price.total.currency && (
           <PriceContainer>
