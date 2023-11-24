@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { increment } from "../../reducers/reducer";
+import { ascending } from "../../reducers/reducer";
 import { SortMapping } from "../../reducers/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ const Sort = () => {
       setSort(SortMapping.Ascending);
     }
 
-    dispatch(increment());
+    dispatch(ascending());
   };
 
   const isDescending = sort === SortMapping.Descending;

@@ -1,9 +1,9 @@
 import { HotelState } from "./types";
 
-export const incrementAction = (state: HotelState[]) => {
+export const ascendingAction = (state: HotelState[]) => {
   state;
 };
 
-export const decrementAction = (state: HotelState[]) => {
+export const descendingAction = (state: HotelState[]) => {
   state;
 };
