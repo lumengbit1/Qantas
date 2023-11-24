@@ -1,8 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { numberToArray, renderIcon } from "./utils";
-import { faStar as faRegularStar } from "@fortawesome/free-regular-svg-icons";
+import { numberToArray, renderIcon, renderIconType } from "./utils";
 import {
+  faCircle as faRegularCircle,
+  faStar as faRegularStar,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faCircle as faSolidCircle,
   faStar as faSolidStar,
+  faCircleHalfStroke,
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
@@ -28,14 +33,36 @@ describe("numberToArray", () => {
 
 describe("renderIcon", () => {
   it.each([
-    [0, faRegularStar],
-    [1, faSolidStar],
-    [0.5, faStarHalfStroke],
-    [undefined, faRegularStar],
+    [0, "star", faRegularStar],
+    [1, "star", faSolidStar],
+    [0.5, "star", faStarHalfStroke],
+    [0, "self", faRegularCircle],
+    [1, "self", faSolidCircle],
+    [0.5, "self", faCircleHalfStroke],
+    [undefined, undefined, faRegularStar],
+  ])(
+    "when input is %s and type is %s, should return %s",
+    (
+      input: number | undefined,
+      type: string | undefined,
+      expected: IconDefinition
+    ) => {
+      const result = renderIcon(input, type);
+
+      expect(result).toStrictEqual(expected);
+    }
+  );
+});
+
+describe("renderIconType", () => {
+  it.each([
+    ["self", "Circle"],
+    ["star", "Star"],
+    [undefined, "Star"],
   ])(
     "when input is %s, should return %s",
-    (input: number | undefined, expected: IconDefinition) => {
-      const result = renderIcon(input);
+    (input: string | undefined, expected: string) => {
+      const result = renderIconType(input);
 
       expect(result).toStrictEqual(expected);
     }

@@ -1,9 +1,15 @@
-import { faStar as faRegularStar } from "@fortawesome/free-regular-svg-icons";
 import {
+  faCircle as faRegularCircle,
+  faStar as faRegularStar,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faCircle as faSolidCircle,
   faStar as faSolidStar,
+  faCircleHalfStroke,
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { IconMap } from "./type";
 
 export const numberToArray = (number: number): number[] => {
   const integerPart = Math.floor(number);
@@ -25,14 +31,32 @@ export const numberToArray = (number: number): number[] => {
   return arr;
 };
 
-export const renderIcon = (value: number | undefined): IconDefinition => {
+export const renderIconType = (type: string | undefined): string => {
+  const isSelf = type?.toLocaleLowerCase() === "self";
+
+  return isSelf ? "Circle" : "Star";
+};
+
+export const renderIcon = (
+  value: number | undefined,
+  type: string | undefined
+): IconDefinition => {
+  const mappingIcon: IconMap = {
+    faRegularStar: faRegularStar,
+    faSolidStar: faSolidStar,
+    faRegularCircle: faRegularCircle,
+    faSolidCircle: faSolidCircle,
+    faCircleHalfStroke: faCircleHalfStroke,
+    faStarHalfStroke: faStarHalfStroke,
+  };
+
   if (value === 1) {
-    return faSolidStar;
+    return mappingIcon[`faSolid${renderIconType(type)}`];
   }
 
   if (value === 0.5) {
-    return faStarHalfStroke;
+    return mappingIcon[`fa${renderIconType(type)}HalfStroke`];
   }
 
-  return faRegularStar;
+  return mappingIcon[`faRegular${renderIconType(type)}`];
 };

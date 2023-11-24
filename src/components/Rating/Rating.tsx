@@ -5,10 +5,14 @@ import { RatingContainer } from "./Rating.style";
 
 const Rating = ({ rating }: Props) => {
   const ratingArray = numberToArray(rating.value);
+
   return (
     <RatingContainer>
       {ratingArray.map((value: number) => (
-        <FontAwesomeIcon icon={renderIcon(value)} className="icon" />
+        <FontAwesomeIcon
+          icon={renderIcon(value, rating.type)}
+          className="icon"
+        />
       ))}
     </RatingContainer>
   );
