@@ -14,6 +14,6 @@ export const SortButton = styled.button`
   &:hover {
     cursor: pointer;
     color: white;
-    background-color: blue;
+    background-color: lightblue;
   }
 `;

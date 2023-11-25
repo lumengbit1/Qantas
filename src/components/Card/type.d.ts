@@ -10,6 +10,6 @@ export interface Props {
   inclusions: HotelState.inclusions;
 }
 
-interface InformationProps {
+export interface InformationProps {
   $dark?: boolean;
 }

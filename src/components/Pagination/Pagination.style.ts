@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PaginationProps } from "./type";
 
 export const Root = styled.div`
   display: flex;
@@ -13,8 +14,8 @@ export const Root = styled.div`
   }
 `;
 
-export const NavItem = styled.button`
-  background-color: grey;
+export const NavItem = styled.button<PaginationProps>`
+  background-color: lightblue;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -23,7 +24,8 @@ export const NavItem = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: blue;
+    background-color: lightgreen;
+    color: white;
   }
 
   &:focus {
@@ -31,7 +33,14 @@ export const NavItem = styled.button`
   }
 
   &:disabled {
-    background-color: grey;
-    cursor: auto;
+    pointer-events: none;
   }
+
+  ${({ $active }) =>
+    $active &&
+    `
+        background-color: lightgreen;
+        color: white;
+        pointer-events: none;
+    `}
 `;
