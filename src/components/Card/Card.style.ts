@@ -9,20 +9,29 @@ export const CardContainer = styled.div`
   box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 0.2);
   justify-content: start;
   border-radius: 0.5rem;
+  height: 20rem;
 
   @media only screen and (max-width: 30rem) {
     grid-template-columns: auto;
+    height: auto;
   }
 `;
 
 export const ImageContainer = styled.div`
-  img {
-    height: 100%;
-    width: 100%;
+  padding-top: 75%;
+  position: relative;
 
-    @media only screen and (max-width: 30rem) {
-      width: 100%;
-    }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20rem;
+  }
+
+  @media only screen and (max-width: 30rem) {
+    padding-top: 0;
+    width: 100vw;
+    aspect-ratio: 4 / 3;
   }
 `;
 

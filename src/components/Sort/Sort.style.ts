@@ -6,6 +6,7 @@ export const Root = styled.div`
   column-gap: 1rem;
   align-items: center;
   width: 12rem;
+  margin-bottom: 1rem;
 `;
 
 export const SortButton = styled.button`
