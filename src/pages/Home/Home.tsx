@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-// import { size } from "../../reducers/constants";
+import { getItemsPerPage } from "./utils";
+import { size } from "../../reducers/constants";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import Card from "../../components/Card/Card";
 import Pagination from "../../components/Pagination/Pagination";
@@ -13,13 +14,13 @@ const HomePage = () => {
   const [searchParams] = useSearchParams();
   const currentPage = Number(searchParams.get("page"));
   const hotels = useSelector((state: RootState) => state.hotelReducer);
-  console.log(currentPage);
+  const hotelsPerPage = getItemsPerPage(hotels, size, currentPage);
 
   return (
     <Root>
       <Sort />
       <CardsContainer>
-        {hotels.map((hotel) => (
+        {hotelsPerPage.map((hotel) => (
           <Card
             key={hotel.id}
             name={hotel.name}

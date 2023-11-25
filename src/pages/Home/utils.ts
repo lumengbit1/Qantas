@@ -1,5 +1,7 @@
+import { HotelState } from "../../reducers/types";
+
 export const getItemsPerPage = (
-  items: unknown[],
+  items: HotelState[],
   size: number,
   pageNumber: number
 ) => {
