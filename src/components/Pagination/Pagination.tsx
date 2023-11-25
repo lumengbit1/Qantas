@@ -14,7 +14,7 @@ const Pagination = () => {
   const hotels = useSelector((state: RootState) => state.hotelReducer);
   const pagination = sizeToPagination(hotels.length, size);
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentPage = Number(searchParams.get("page"));
+  const currentPage = Number(searchParams.get("page")) || 1;
 
   const goToPosts = (page: number) => {
     const params = {
@@ -35,7 +35,7 @@ const Pagination = () => {
         <FontAwesomeIcon icon={faChevronLeft} />
       </NavItem>
       {pagination.map((_item, index) => {
-        const isCurrentPage = index + 1 === Number(searchParams.get("page"));
+        const isCurrentPage = index + 1 === currentPage;
         return (
           <NavItem
             key={index}

@@ -12,7 +12,8 @@ import type { RootState } from "../../store/store";
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
-  const currentPage = Number(searchParams.get("page"));
+  const currentPage = Number(searchParams.get("page")) || 1;
+
   const hotels = useSelector((state: RootState) => state.hotelReducer);
   const hotelsPerPage = getItemsPerPage(hotels, size, currentPage);
 
