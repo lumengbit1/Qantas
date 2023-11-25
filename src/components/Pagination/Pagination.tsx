@@ -28,7 +28,11 @@ const Pagination = () => {
 
   return (
     <Root aria-label="pagination">
-      <NavItem aria-label="pagination_previous" disabled={currentPage === 1}>
+      <NavItem
+        aria-label="pagination_previous"
+        disabled={currentPage === 1}
+        onClick={() => goToPosts(currentPage - 1)}
+      >
         <FontAwesomeIcon icon={faChevronLeft} />
       </NavItem>
       {pagination.map((_item, index) => {
@@ -48,6 +52,7 @@ const Pagination = () => {
       <NavItem
         aria-label="pagination_next"
         disabled={currentPage === pagination.length}
+        onClick={() => goToPosts(currentPage + 1)}
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </NavItem>
