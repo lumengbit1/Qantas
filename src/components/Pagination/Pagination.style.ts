@@ -16,8 +16,8 @@ export const Root = styled.div`
 
 export const NavItem = styled.button<PaginationProps>`
   background-color: lightblue;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   border: none;
   padding: 0;
