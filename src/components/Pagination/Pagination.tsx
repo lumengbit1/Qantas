@@ -6,10 +6,9 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { sizeToPagination } from "./utils";
+import { size } from "../../reducers/constants";
 import { NavItem, Root } from "./Pagination.style";
 import type { RootState } from "../../store/store";
-
-const size = 5;
 
 const Pagination = () => {
   const hotels = useSelector((state: RootState) => state.hotelReducer);
