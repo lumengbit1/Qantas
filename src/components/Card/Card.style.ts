@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { InformationProps } from "./type";
 
 const padding = "1rem";
+const imageHeight = "18rem";
 
 export const CardContainer = styled.div`
   display: grid;
@@ -9,7 +10,6 @@ export const CardContainer = styled.div`
   box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 0.2);
   justify-content: start;
   border-radius: 0.5rem;
-  height: 20rem;
 
   @media only screen and (max-width: 30rem) {
     grid-template-columns: auto;
@@ -18,10 +18,9 @@ export const CardContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  /* padding-top: 100%; */
+  padding-left: calc(${imageHeight} / 3 * 4);
+  padding-top: ${imageHeight};
   position: relative;
-  height: 20rem;
-  aspect-ratio: 4 / 3;
 
   img {
     position: absolute;
@@ -30,12 +29,11 @@ export const ImageContainer = styled.div`
     right: 0;
     bottom: 0;
     height: 100%;
+    width: 100%;
   }
 
   @media only screen and (max-width: 30rem) {
-    padding-top: 0;
-    width: 100vw;
-    aspect-ratio: 4 / 3;
+    padding-top: calc(100vw / 16 * 9);
   }
 `;
 
