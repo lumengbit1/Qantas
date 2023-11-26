@@ -24,7 +24,11 @@ const Sort = () => {
 
   return (
     <Root>
-      <SortButton aria-label="sort_by_price" onClick={handleSort}>
+      <SortButton
+        aria-label="sort_by_price"
+        data-testid="sort_by_price"
+        onClick={handleSort}
+      >
         Sort By Price
       </SortButton>
       {sort && (
