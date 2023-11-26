@@ -18,7 +18,7 @@ const HomePage = () => {
   const hotelsPerPage = getItemsPerPage(hotels, size, currentPage);
 
   return (
-    <Root>
+    <Root data-testid="home_page">
       <Sort />
       <CardsContainer>
         {hotelsPerPage.map((hotel) => (
