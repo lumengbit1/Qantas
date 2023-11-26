@@ -1,14 +1,6 @@
-import { HotelState } from "../../reducers/types";
+import { HotelState } from "../../types/global";
 
-export interface Props {
-  name: HotelState.name;
-  heroImage: HotelState.heroImage;
-  location: HotelState.location;
-  rating: HotelState.rating;
-  sleep: HotelState.sleep;
-  price: HotelState.price;
-  inclusions: HotelState.inclusions;
-}
+export interface Props extends Omit<HotelState, "id"> {}
 
 export interface InformationProps {
   $dark?: boolean;

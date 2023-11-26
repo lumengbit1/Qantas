@@ -1,4 +1,4 @@
-import { HotelState } from "../../reducers/types";
+import { HotelState } from "../../types/global";
 
 export const getItemsPerPage = (
   items: HotelState[],
