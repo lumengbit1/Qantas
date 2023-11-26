@@ -11,4 +11,8 @@ fileignoreconfig:
   checksum: 3cc75591fff8520d8b1d36c51829b92702f260d8f3c0beb077cf45fbcb60e265
 - filename: src/assets/mockData/mock_hotel_data_with_picsum.json
   checksum: f19824faff77bfc923f486a2689453dbd9f2bdcc32b5716ec61d61b7743298d4
+- filename: src/reducers/mockData/expectedData_Ascending.json
+  checksum: 2ecc3eead15bbd9c03c545c83189ef0925f6f3121a60e7da6afe8c20a197613a
+- filename: src/reducers/mockData/expectedData_Descending.json
+  checksum: 749dfd2aef9021561caa1d855b8ebb8d97c7fe624f2b96dd2cf081eab9962677
   version: ""
