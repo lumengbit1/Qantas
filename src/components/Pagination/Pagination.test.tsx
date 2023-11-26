@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { createMemoryHistory, History } from "history";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Pagination from "./Pagination";
@@ -28,12 +27,7 @@ vi.mock("react-router-dom", async () => {
 });
 
 describe("Pagination Component", () => {
-  let history: History;
   beforeEach(() => {
-    history = createMemoryHistory({
-      initialEntries: ["/"],
-    });
-
     render(
       <Provider store={store}>
         <MemoryRouter initialEntries={["/"]}>
@@ -43,10 +37,6 @@ describe("Pagination Component", () => {
         </MemoryRouter>
       </Provider>
     );
-  });
-
-  it("should return default url", () => {
-    expect(history.location.pathname).toBe("/");
   });
 
   it("should disabled in the pagination_1 button, and prev button is disabled", () => {
