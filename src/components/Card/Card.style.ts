@@ -83,6 +83,10 @@ export const PriceContainer = styled.div`
   justify-content: end;
   padding-top: calc(${padding} / 2);
 
+  .currency {
+    font-weight: 600;
+  }
+
   .price {
     font-size: 1.5rem;
     font-weight: 800;

@@ -43,7 +43,9 @@ const Card = ({
         </InfoContainer>
         {price.total.amount && price.total.currency && (
           <PriceContainer>
-            <span>1 night from [{price.total.currency}]</span>
+            <span className="currency">
+              1 night from [{price.total.currency}]
+            </span>
             <span className="price">
               <sup>$</sup>
               <span>{price.total.amount}</span>
