@@ -29,12 +29,10 @@ const Card = ({
         <InfoContainer>
           <HotelName aria-label="hotel_name">{name}</HotelName>
           <Information aria-label="hotel_location">
-            {`${location.city}${
-              location.country ? `, ${location.country}` : null
-            }`}
+            {`${location.city}, ${location.country}`}
           </Information>
           <Rating aria-label="hotel_rating" rating={rating} />
-          <Information $dark>{sleep ? `Sleeps ${sleep}` : null}</Information>
+          <Information $dark>{`Sleeps ${sleep}`}</Information>
           <InclusionsContainer aria-label="hotel_inclusions">
             {inclusions.map((inclusion: string) => (
               <li key={inclusion} aria-label={inclusion}>
@@ -45,10 +43,7 @@ const Card = ({
         </InfoContainer>
         {price.total.amount && price.total.currency && (
           <PriceContainer>
-            <span>
-              1 night from&nbsp;
-              {price.total.currency ? `[${price.total.currency}]` : null}
-            </span>
+            <span>1 night from [{price.total.currency}]</span>
             <span className="price">
               <sup>$</sup>
               <span>{price.total.amount}</span>
