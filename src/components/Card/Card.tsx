@@ -1,6 +1,6 @@
 import Rating from "../Rating/Rating";
 import { CurrencyMapping } from "./constants";
-import { Props } from "./type";
+import { HotelState } from "../../types/global";
 import {
   CardContainer,
   HotelContainer,
@@ -13,6 +13,7 @@ import {
 } from "./Card.style";
 
 const Card = ({
+  id,
   name,
   heroImage,
   location,
@@ -20,9 +21,9 @@ const Card = ({
   sleep,
   price,
   inclusions,
-}: Props) => {
+}: HotelState) => {
   return (
-    <CardContainer>
+    <CardContainer id={id}>
       <ImageContainer role="img" aria-label="hotel_image">
         <img src={heroImage} alt="hotel" />
       </ImageContainer>

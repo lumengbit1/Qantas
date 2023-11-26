@@ -24,6 +24,7 @@ const HomePage = () => {
         {hotelsPerPage.map((hotel) => (
           <Card
             key={hotel.id}
+            id={hotel.id}
             name={hotel.name}
             heroImage={hotel.heroImage}
             location={hotel.location}
