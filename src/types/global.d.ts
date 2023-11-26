@@ -35,6 +35,6 @@ export interface HotelState {
   sleep: number;
 }
 
-export type SortMappingType = {
+export type MappingType = {
   [key: string]: string;
 };

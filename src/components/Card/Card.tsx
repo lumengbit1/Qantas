@@ -1,4 +1,5 @@
 import Rating from "../Rating/Rating";
+import { CurrencyMapping } from "./constants";
 import { Props } from "./type";
 import {
   CardContainer,
@@ -47,7 +48,7 @@ const Card = ({
               1 night from [{price.total.currency}]
             </span>
             <span className="price">
-              <sup>$</sup>
+              <sup>{CurrencyMapping[price.total.currency.toUpperCase()]}</sup>
               <span>{price.total.amount}</span>
             </span>
           </PriceContainer>
