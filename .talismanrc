@@ -8,7 +8,7 @@ fileignoreconfig:
 - filename: '.talismanrc '
   checksum: 5b7febbfac7cf9c56c56f626e3db95c82c6a60b0c26a560b95a1850dbfbc386f
 - filename: pnpm-lock.yaml
-  checksum: 3cc75591fff8520d8b1d36c51829b92702f260d8f3c0beb077cf45fbcb60e265
+  checksum: 6960c326079ed746cb885cb82c9dc4cae742ec51bd63d56cda8a2179733cda9c
 - filename: src/assets/mockData/mock_hotel_data_with_picsum.json
   checksum: f19824faff77bfc923f486a2689453dbd9f2bdcc32b5716ec61d61b7743298d4
 - filename: src/reducers/mockData/expectedData_Ascending.json

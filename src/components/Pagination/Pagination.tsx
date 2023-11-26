@@ -29,6 +29,7 @@ const Pagination = () => {
     <Root aria-label="pagination">
       <NavItem
         aria-label="pagination_previous"
+        data-testid={"pagination_prev"}
         disabled={currentPage === 1}
         onClick={() => goToPosts(currentPage - 1)}
       >
@@ -40,8 +41,8 @@ const Pagination = () => {
           <NavItem
             key={index}
             aria-label={`${index + 1}`}
+            data-testid={`pagination_${index + 1}`}
             onClick={() => goToPosts(index + 1)}
-            // disabled={isCurrentPage}
             $active={isCurrentPage}
           >
             {index + 1}
@@ -50,6 +51,7 @@ const Pagination = () => {
       })}
       <NavItem
         aria-label="pagination_next"
+        data-testid={"pagination_next"}
         disabled={currentPage === pagination.length}
         onClick={() => goToPosts(currentPage + 1)}
       >
