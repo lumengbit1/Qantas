@@ -1,4 +1,3 @@
-import { describe, it, expect } from "vitest";
 import { numberToArray, renderIcon, renderIconType } from "./utils";
 import {
   faCircle as faRegularCircle,
