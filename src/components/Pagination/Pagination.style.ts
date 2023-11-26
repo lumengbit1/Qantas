@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PaginationProps } from "./type";
+import type { PaginationProps } from "./type";
 
 export const Root = styled.div`
   display: flex;

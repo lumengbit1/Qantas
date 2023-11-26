@@ -1,5 +1,6 @@
 import reducer, { sorting } from "./reducer";
 import { SortMapping } from "./constants";
+
 import mockData from "../assets/mockData/mock_hotel_data_with_picsum.json";
 import expectedData_Ascending from "./mockData/expectedData_Ascending.json";
 import expectedData_Descending from "./mockData/expectedData_Descending.json";

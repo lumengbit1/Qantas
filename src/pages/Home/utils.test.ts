@@ -1,5 +1,5 @@
 import { getItemsPerPage } from "./utils";
-import { HotelState } from "../../types/global";
+import type { HotelState } from "../../types/global";
 
 describe("getItemsPerPage", () => {
   it.each([

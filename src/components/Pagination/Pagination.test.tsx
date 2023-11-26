@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
-import Pagination from "./Pagination";
 import { Provider } from "react-redux";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
+
+import Pagination from "./Pagination";
 import { store } from "../../store/store";
 
 let mockSearchParam = "";

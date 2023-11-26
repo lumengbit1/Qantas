@@ -1,4 +1,3 @@
-import { numberToArray, renderIcon, renderIconType } from "./utils";
 import {
   faCircle as faRegularCircle,
   faStar as faRegularStar,
@@ -9,6 +8,8 @@ import {
   faCircleHalfStroke,
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { numberToArray, renderIcon, renderIconType } from "./utils";
 
 describe("numberToArray", () => {
   it.each([

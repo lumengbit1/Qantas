@@ -1,19 +1,22 @@
-import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { sizeToPagination } from "./utils";
+
 import { size } from "../../reducers/constants";
+import { sizeToPagination } from "./utils";
 import { NavItem, Root } from "./Pagination.style";
+
 import type { RootState } from "../../store/store";
 
 const Pagination = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const hotels = useSelector((state: RootState) => state.hotelReducer);
   const pagination = sizeToPagination(hotels.length, size);
-  const [searchParams, setSearchParams] = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
 
   const goToPosts = (page: number) => {
@@ -35,6 +38,7 @@ const Pagination = () => {
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </NavItem>
+
       {pagination.map((_item, index) => {
         const isCurrentPage = index + 1 === currentPage;
         return (
@@ -49,6 +53,7 @@ const Pagination = () => {
           </NavItem>
         );
       })}
+
       <NavItem
         aria-label="pagination_next"
         data-testid="pagination_next"

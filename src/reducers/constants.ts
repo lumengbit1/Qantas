@@ -1,4 +1,4 @@
-import { MappingType } from "../types/global";
+import type { MappingType } from "../types/global";
 
 export const size = 5;
 

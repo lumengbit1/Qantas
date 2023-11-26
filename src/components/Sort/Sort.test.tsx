@@ -1,6 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
+import { fireEvent, render, screen } from "@testing-library/react";
 import configureStore from "redux-mock-store";
+
 import Sort from "./Sort";
 
 const mockStore = configureStore([]);

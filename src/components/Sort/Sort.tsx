@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { sorting } from "../../reducers/reducer";
-import { SortMapping } from "../../reducers/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
+import { SortMapping } from "../../reducers/constants";
+import { sorting } from "../../reducers/reducer";
 import { Root, SortButton } from "./Sort.style";
 
 const Sort = () => {
-  const dispatch = useDispatch();
   const [sort, setSort] = useState<string | undefined>();
+  const dispatch = useDispatch();
+
+  const isDescending = sort === SortMapping.Descending;
 
   const handleSort = () => {
     if (sort === SortMapping.Ascending) {
@@ -19,8 +22,6 @@ const Sort = () => {
       dispatch(sorting(SortMapping.Ascending));
     }
   };
-
-  const isDescending = sort === SortMapping.Descending;
 
   return (
     <Root>

@@ -1,5 +1,6 @@
 import { SortMapping } from "./constants";
-import { HotelState } from "./types";
+
+import type { HotelState } from "../types/global";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 export const sortingAction = (

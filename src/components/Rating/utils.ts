@@ -1,3 +1,4 @@
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import {
   faCircle as faRegularCircle,
   faStar as faRegularStar,
@@ -8,8 +9,8 @@ import {
   faCircleHalfStroke,
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { IconMapping } from "./type";
+
+import type { IconMapping } from "./type";
 
 export const numberToArray = (number: number): number[] => {
   const integerPart = Math.floor(number);

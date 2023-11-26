@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { numberToArray, renderIcon } from "./utils";
-import { Props } from "./type";
 import { RatingContainer } from "./Rating.style";
+
+import type { Props } from "./type";
 
 const Rating = ({ rating }: Props) => {
   const ratingArray = numberToArray(rating.value);

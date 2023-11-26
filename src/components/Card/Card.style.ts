@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InformationProps } from "./type";
+import type { InformationProps } from "./type";
 
 const padding = "1rem";
 const imageHeight = "18rem";

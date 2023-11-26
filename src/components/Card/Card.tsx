@@ -1,6 +1,5 @@
 import Rating from "../Rating/Rating";
 import { CurrencyMapping } from "./constants";
-import { HotelState } from "../../types/global";
 import {
   CardContainer,
   HotelContainer,
@@ -11,6 +10,8 @@ import {
   Information,
   PriceContainer,
 } from "./Card.style";
+
+import type { HotelState } from "../../types/global";
 
 const Card = ({
   id,
@@ -27,14 +28,19 @@ const Card = ({
       <ImageContainer role="img" aria-label="hotel_image">
         <img src={heroImage} alt="hotel" />
       </ImageContainer>
+
       <HotelContainer>
         <InfoContainer>
           <HotelName aria-label="hotel_name">{name}</HotelName>
+
           <Information aria-label="hotel_location">
             {`${location.city}, ${location.country}`}
           </Information>
+
           <Rating aria-label="hotel_rating" rating={rating} />
+
           <Information $dark>{`Sleeps ${sleep}`}</Information>
+
           <InclusionsContainer aria-label="hotel_inclusions">
             {inclusions.map((inclusion: string) => (
               <li key={inclusion} aria-label={inclusion}>
@@ -43,6 +49,7 @@ const Card = ({
             ))}
           </InclusionsContainer>
         </InfoContainer>
+
         {price.total.amount && price.total.currency && (
           <PriceContainer>
             <span className="currency">

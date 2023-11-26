@@ -1,4 +1,4 @@
-import { HotelState } from "../../types/global";
+import type { HotelState } from "../../types/global";
 
 export const getItemsPerPage = (
   items: HotelState[],
