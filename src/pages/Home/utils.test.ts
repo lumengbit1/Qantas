@@ -1,4 +1,5 @@
 import { getItemsPerPage } from "./utils";
+import { HotelState } from "../../reducers/types";
 
 describe("getItemsPerPage", () => {
   it.each([
@@ -9,7 +10,11 @@ describe("getItemsPerPage", () => {
   ])(
     "when size is %s and number is %s, should return %s",
     (input, size, pageNumber, expected) => {
-      const result = getItemsPerPage(input, size, pageNumber);
+      const result = getItemsPerPage(
+        input as unknown as HotelState[],
+        size,
+        pageNumber
+      );
 
       expect(result).toStrictEqual(expected);
     }
