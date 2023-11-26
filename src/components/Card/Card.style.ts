@@ -18,14 +18,18 @@ export const CardContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  padding-top: 75%;
+  /* padding-top: 100%; */
   position: relative;
+  height: 20rem;
+  aspect-ratio: 4 / 3;
 
   img {
     position: absolute;
     top: 0;
     left: 0;
-    height: 20rem;
+    right: 0;
+    bottom: 0;
+    height: 100%;
   }
 
   @media only screen and (max-width: 30rem) {
